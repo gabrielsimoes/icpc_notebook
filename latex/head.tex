@@ -41,6 +41,25 @@
   moredelim=**[is][\color{red}]{@}{@}
 }
 
+\lstdefinelanguage{vim}
+{
+  % list of keywords
+  morekeywords={
+  set, let
+  map, nmap,
+  filetype,
+  on, off,
+  autocmd,
+  Plugin,
+  call,
+  syntax,
+  colors,
+  imap
+  },
+  morecomment=[l]{"}, % l is for line comment
+  morestring=[b]' % defines that strings are enclosed in double quotes
+}
+
 \title{ACM ICPC Reference}
 \author{University of Notre Dame}
 
@@ -50,8 +69,6 @@
 \tableofcontents
 \newpage
 
-\begin{lstlisting}
-\input{../vimrc}
-\end{lstlisting}
+\lstinputlisting[language=vim]{../vimrc}
 
-\lstinputlisting{hashify.sh}
+\lstinputlisting[language=bash]{hashify.sh}
