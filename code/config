@@ -25,5 +25,7 @@
 <Simplex> <simplex.cpp>
 #<Zeta> <zeta.cpp>
 #<Zeta Disjoint Or> <zeta_dor.cpp>
-<Miller-Rabin> <millerrabin.cpp>
-#<Pollard-Rho> <pollard_rho.cpp>
+!Number Theory
+<Extended Euclidean Algorithm> <number_theory/egcd.cpp>
+<Miller-Rabin> <number_theory/millerrabin.cpp>
+#<Pollard-Rho> <number_theory/pollard_rho.cpp>
