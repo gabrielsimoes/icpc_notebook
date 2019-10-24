@@ -4,7 +4,7 @@ Team: Notre Dame Gold
 
 Year: 2019-2020
 
-[Latest Version](https://raw.githubusercontent.com/gabrielsimoes/icpc_notebook/master/latex/notebook.pdf)
+[Latest Version](https://github.com/gabrielsimoes/icpc_notebook/blob/master/latex/notebook.pdf)
 
 ## Initializing
 
