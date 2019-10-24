@@ -3,5 +3,7 @@
 **/*.swp
 **/*.swo
 
+latex/content.tex
+latex/src
 latex/notebook.*
-latex/builder.out
+!latex/notebook.pdf
