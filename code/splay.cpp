@@ -6,12 +6,12 @@ int p[N], sz[N];
 int C[N][2]; // {left, right} children
 num X[N];
 
-// atualize os valores associados aos nos que podem ser calculados a partir dos filhos
+// update values associated to the nodes that can be calculated from child
 void calc(int u) {
 	sz[u] = sz[C[u][0]] + 1 + sz[C[u][1]];
 }
 
-// Puxa o filho dir de u para ficar em sua posicao e o retorna
+// pull child dir of u to its position and return
 int rotate(int u, int dir) {
 	int v = C[u][dir];
 	C[u][dir] = C[v][!dir];
@@ -25,7 +25,7 @@ int rotate(int u, int dir) {
 	return v;
 }
 
-// Traz o no u a raiz
+// bring node u to root
 void splay(int u) {
 	while(p[u]) {
 		int v = p[u], w = p[p[u]];
@@ -45,7 +45,7 @@ void splay(int u) {
 	}
 }
 
-// retorna um no com valor x, ou outro no se n foi encontrado (n eh floor nem ceiling)
+// return node with value x or other if node was not found
 int find_val(int u, num x) {
 	int v = u;
 	while(u && X[u] != x) {
@@ -58,7 +58,7 @@ int find_val(int u, num x) {
 	return u;
 }
 
-// retorna o s-esimo no (0-indexed)
+// return nth node
 int find_sz(int u, int s) {
 	while(sz[C[u][0]] != s) {
 		if(sz[C[u][0]] < s) {
@@ -70,7 +70,7 @@ int find_sz(int u, int s) {
 	return u;
 }
 
-// junte duas splays, assume que elementos l <= elementos r
+// concatenate two trees assuming #elements l <= #elements r
 int merge(int l, int r) {
 	if(!l || !r) return l + r;
 	while(C[l][1]) l = C[l][1];
@@ -82,7 +82,7 @@ int merge(int l, int r) {
 	return l;
 }
 
-// Adiciona no x a splay u e retorna x
+// add node x to splay u and return x
 int add(int u, int x) {
 	int v = 0;
 	while(u) v = u, u = C[u][X[x] >= X[u]];
@@ -91,12 +91,12 @@ int add(int u, int x) {
 	return x;
 }
 
-// chame isso 1 vez no inicio
+// call 1 time at the top
 void init() {
 	en = 1;
 }
 
-// Cria um novo no
+// create a new node
 int new_node(num val) {
 	int i = en++;
 	assert(i < N);
