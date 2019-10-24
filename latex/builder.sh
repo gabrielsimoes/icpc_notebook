@@ -3,7 +3,10 @@
 mkdir -p src
 
 while read -r line; do
-    if [ "${line:0:1}" == "!" ]; then
+    if [ "${line:0:1}" == "#" ]; then
+	echo "% $line"
+	# comment, do nothing
+    elif [ "${line:0:1}" == "!" ]; then
 	echo ""
         echo "\\section{${line:1}}"
     else
