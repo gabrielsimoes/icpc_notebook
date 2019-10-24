@@ -8,7 +8,7 @@ content.tex: builder.sh hashify.sh ../code/config $(CODES)
 notebook.tex: head.tex content.tex notes.tex tail.tex
 	cat head.tex content.tex notes.tex tail.tex > notebook.tex
 
-notebook.pdf: notebook.tex
+notebook.pdf: notebook.tex ../vimrc
 	pdflatex --interaction=batchmode notebook.tex
 	pdflatex --interaction=batchmode notebook.tex
 
