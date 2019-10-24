@@ -1,12 +1,12 @@
 //typedef int num; const int N = ; const int M =  * 2; const num eps = 0;
 struct dinic {
-	int hd[N], seen[N], qu[N], lv[N], ei[N], to[M], nx[M]; num fl[M], cp[M]; int en = 2; int tempo = 0;
+	int hd[N], seen[N], qu[N], lv[N], ei[N], to[M], nx[M]; num fl[M], cp[M]; int en = 2; int when = 0;
 	bool bfs(int s, int t) {
-		seen[t] = ++tempo; lv[t] = 0; int ql = 0, qr = 0; qu[qr++] = t;
+		seen[t] = ++when; lv[t] = 0; int ql = 0, qr = 0; qu[qr++] = t;
 		while(ql != qr) {
 			t = qu[ql++]; ei[t] = hd[t]; if(s == t) return true;
-			for(int e = hd[t]; e; e = nx[e]) if(seen[to[e]] != tempo && cp[e ^ 1] - fl[e ^ 1] > eps) {
-				seen[to[e]] = tempo;
+			for(int e = hd[t]; e; e = nx[e]) if(seen[to[e]] != when && cp[e ^ 1] - fl[e ^ 1] > eps) {
+				seen[to[e]] = when;
 				lv[to[e]] = lv[t] + 1;
 				qu[qr++] = to[e];
 			}
@@ -15,7 +15,7 @@ struct dinic {
 	}
 	num dfs(int s, int t, num f) {
 		if(s == t) return f;
-		for(int &e = ei[s]; e; e = nx[e]) if(ei[to[e]] && seen[to[e]] == tempo && cp[e] - fl[e] > eps && lv[to[e]] == lv[s] - 1)
+		for(int &e = ei[s]; e; e = nx[e]) if(ei[to[e]] && seen[to[e]] == when && cp[e] - fl[e] > eps && lv[to[e]] == lv[s] - 1)
 			if(num rf = dfs(to[e], t, min(f, cp[e] - fl[e]))) {
 				fl[e] += rf;
 				fl[e ^ 1] -= rf;

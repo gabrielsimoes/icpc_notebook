@@ -3,8 +3,8 @@
 double a[N][N];
 double ans[N];
 
-// sum(a[i][j] * x_j) = a[i][n] para 0 <= i < n
-// guarda a resposta em ans e retorna o determinante de a
+// sum(a[i][j] * x_j) = a[i][n] for 0 <= i < n
+// stores answer in ans and returns det(a)
 double solve(int n) {
 	double det = 1;
 	for(int i = 0; i < n; i++) {
