@@ -1,3 +1,14 @@
+!STL
+<Algorithms> <algorithms.cpp>
+<Numeric> <valarray.cpp>
+<List> <list.cpp>
+<Unordered Map> <unordered_map.cpp>
+<Map> <map.cpp>
+<Set> <set.cpp>
+<Vector> <vector.cpp>
+<Stack> <stack.cpp>
+<Queue> <queue.cpp>
+<Deque> <deque.cpp>
 !Geometry
 <Base> <geometry/basic.cpp>
 <Advanced> <geometry/algorithms.cpp>

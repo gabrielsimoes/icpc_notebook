@@ -1,0 +1,20 @@
+#include <deque>
+deque <int> d;
+d.insert()
+d.rbegin()
+d.rend()
+d.begin()
+d.end()
+d.assign()
+d.resize()
+d.push_front()
+d.push_back()
+d.pop_front()
+d.pop_back()
+d.front()
+d.back()
+d.clear()
+d.erase()
+d.empty()
+d.size()
+
