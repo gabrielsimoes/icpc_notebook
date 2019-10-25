@@ -9,7 +9,7 @@ typedef pair<ll,ll> pii;
 typedef ll num; const num eps = 0; num INF = 1e17;
 
 #include "gtest/gtest.h"
-#include "../code/envelope.cpp"
+#include "../../code/structures/envelope.cpp"
 
 bool operator== (line a, line b) {
 	return a.a == b.a && a.b == b.b;

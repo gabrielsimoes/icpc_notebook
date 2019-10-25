@@ -11,7 +11,7 @@ typedef long long int ll;
 typedef pair<ll,ll> pii;
 #define pb push_back
 
-#include "../code/orderedset.cpp"
+#include "../../code/structures/orderedset.cpp"
 
 TEST(OrderedSet, NullType) {
 	ord_set<int,null_type> s;

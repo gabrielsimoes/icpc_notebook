@@ -5,7 +5,7 @@ using namespace std;
 const int N = 1123456;
 typedef int num;
 
-#include "../code/linkcut.cpp"
+#include "../../code/structures/linkcut.cpp"
 inline int rnd(int l, int r) {
 	double p = rand() / (double(RAND_MAX) + 1);
 	return l + (r - l + 1) * p;

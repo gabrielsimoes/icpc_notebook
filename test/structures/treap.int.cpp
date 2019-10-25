@@ -3,7 +3,7 @@ using namespace std;
 typedef int num;
 const int N = 1123456;
 #include "gtest/gtest.h"
-#include "../code/treap.cpp"
+#include "../../code/structures/treap.cpp"
 
 inline int rnd(int l, int r) {
 	double p = rand() / (double(RAND_MAX) + 1);

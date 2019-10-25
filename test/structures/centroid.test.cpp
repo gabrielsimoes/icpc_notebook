@@ -8,7 +8,7 @@ typedef pair<ll,ll> pii;
 #define pb push_back
 
 const int N = 1e6;
-#include "../code/centroid.cpp"
+#include "../../code/structures/centroid.cpp"
 
 pair<bool,pii> isBalanced (vector<int> chld[], int u, int p) {
 	pii cur(1,1);

@@ -6,7 +6,7 @@ const num eps = 0;
 #include <bits/stdc++.h>
 using namespace std;
 #include "gtest/gtest.h"
-#include "../code/dinic.cpp"
+#include "../../code/graphs/dinic.cpp"
 
 dinic d;
 

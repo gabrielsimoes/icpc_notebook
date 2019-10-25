@@ -20,7 +20,7 @@
 <MinCost MaxFlow> <graphs/min_cost.cpp>
 <Cycle Cancelling> <graphs/cycle_cancel.cpp>
 <Hungarian> <graphs/hungarian.cpp>
-<Bridges/Cut-Vertices> <graphs/brdges.cpp>
+<Bridges/Cut-Vertices> <graphs/bridges.cpp>
 <Strongly Connected Components> <graphs/scc.cpp>
 <Stable Marraige Problem> <graphs/stablemp.cpp>
 !Structures

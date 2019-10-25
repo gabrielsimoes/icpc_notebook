@@ -5,7 +5,7 @@ using namespace std;
 const int N = 1123456;
 typedef int num;
 
-#include "../code/splay.cpp"
+#include "../../code/structures/splay.cpp"
 
 int pe[N];
 
