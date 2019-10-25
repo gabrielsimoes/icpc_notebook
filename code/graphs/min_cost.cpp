@@ -2,7 +2,7 @@
 //typedef int num; // type of cost
 //const int N = , M =  * 2; const num eps = 0;
 struct mcmf {
-	int es[N], to[M], nx[M], en = 2, pai[N], seen[N], when, qu[N];
+	int es[N], to[M], nx[M], en = 2, par[N], seen[N], when, qu[N];
 	val fl[M], cp[M], flow; num cs[M], d[N], tot;
 	val spfa(int s, int t) {
 		when++; int a = 0, b = 0;
@@ -11,17 +11,17 @@ struct mcmf {
 		while(a != b) {
 			int u = qu[a++]; if(a == N) a = 0; seen[u] = 0;
 			for(int e = es[u]; e; e = nx[e]) if(cp[e] - fl[e] > val(0) && d[u] + cs[e] < d[to[e]] - eps) {
-				d[to[e]] = d[u] + cs[e]; pai[to[e]] = e ^ 1;
+				d[to[e]] = d[u] + cs[e]; par[to[e]] = e ^ 1;
 				if(seen[to[e]] < when) { seen[to[e]] = when; qu[b++] = to[e]; if(b == N) b = 0; }
 			}
 		}
 		if(d[t] == numeric_limits<num>::max()) return false;
 		val mx = numeric_limits<val>::max();
-		for(int u = t; u != s; u = to[pai[u]])
-			mx = min(mx, cp[pai[u] ^ 1] - fl[pai[u] ^ 1]);
+		for(int u = t; u != s; u = to[par[u]])
+			mx = min(mx, cp[par[u] ^ 1] - fl[par[u] ^ 1]);
 		tot += d[t] * val(mx);
-		for(int u = t; u != s; u = to[pai[u]])
-			fl[pai[u]] -= mx, fl[pai[u] ^ 1] += mx;
+		for(int u = t; u != s; u = to[par[u]])
+			fl[par[u]] -= mx, fl[par[u] ^ 1] += mx;
 		return mx;
 	}
 	// public $
