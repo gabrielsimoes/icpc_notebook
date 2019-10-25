@@ -3,20 +3,23 @@
 <Advanced> <geometry/algorithms.cpp>
 <3D> <geometry/3d.cpp>
 !Graphs
-<<<<<<< Updated upstream
 <DFS> <graphs/dfs.cpp>
 <BFS> <graphs/bfs.cpp>
 <Dinic> <graphs/dinic.cpp>
 <MinCost MaxFlow> <graphs/min_cost.cpp>
 <Cycle Cancelling> <graphs/cycle_cancel.cpp>
 <Hungarian> <graphs/hungarian.cpp>
+<Bridges/Cut-Vertices> <graphs/brdges.cpp>
+<Strongly Connected Components> <graphs/scc.cpp>
+<Stable Marraige Problem> <graphs/stablemp.cpp>
 !Structures
-<Ordered Set> <orderedset.cpp>
-<Treap> <treap.cpp>
-<Envelope> <envelope.cpp>
-<Centroid> <centroid.cpp>
-<Link Cut Tree> <linkcut.cpp>
-<Splay Tree> <splay.cpp>
+<Ordered Set> <structures/orderedset.cpp>
+<Treap> <structures/treap.cpp>
+<Envelope> <structures/envelope.cpp>
+<Centroid> <structures/centroid.cpp>
+<Link Cut Tree> <structures/linkcut.cpp>
+<Binary Indexed Tree> <structures/bit.cpp>
+<Segment Tree> <structures/segtree.cpp>
 !Strings
 <Suffix Tree> <sufftree.cpp>
 <Z-function> <zfunction.cpp>
