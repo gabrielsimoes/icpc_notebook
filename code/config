@@ -6,6 +6,8 @@
 <Dinic> <dinic.cpp>
 <MinCost MaxFlow> <min_cost.cpp>
 <Cycle Cancelling> <cycle_cancel.cpp>
+<DFS> <dfs.cpp>
+<BFS> <bfs.cpp>
 #<Hungarian> <hungarian.cpp>
 !Structures
 <Ordered Set> <orderedset.cpp>
@@ -28,4 +30,5 @@
 !Number Theory
 <Extended Euclidean Algorithm> <number_theory/egcd.cpp>
 <Miller-Rabin> <number_theory/millerrabin.cpp>
+<Diofantine> <diofantine.cpp>
 #<Pollard-Rho> <number_theory/pollard_rho.cpp>
